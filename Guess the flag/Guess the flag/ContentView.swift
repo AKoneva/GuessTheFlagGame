@@ -77,14 +77,12 @@ struct ContentView: View {
                     resetGame()
                 }
                 .buttonStyle(.borderedProminent)
-            }
+            }.blur(radius: showResult ? 20 : 0)
             
                            Text(result)
                                .font(.system(size: 70))
                                .fontWeight(.bold)
                                .foregroundColor(result == "WRONG" ? .red : .green)
-                               .padding()
-                               
                                .transition(.move(edge: .bottom))
                                .opacity(showResult ? 1 : 0)
         }
